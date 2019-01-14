@@ -1,2 +1,25 @@
-class Player
-  name: "unknown"
+class Player extends Entity
+	scenes: "*"
+	new: =>
+    	@x, @y = 500, 600
+    	@img = getChar(0, 11)
+    	@pad = 3
+    	@enable!
+    	super!
+	update: (dt) =>
+		@dx, @dy = 0, 0
+		if input\down('down') then @dy = 100
+		if input\down('up') then @dy = -100
+		if input\down('left') then @dx = -100
+		if input\down('right') then @dx = 100
+		super\update(dt)
+	enable: => --eventually make this nicer, with a loop or something
+		input\bind('s', 'down')
+		input\bind('w', 'up')
+		input\bind('a', 'left')
+		input\bind('d', 'right')
+	disable: =>
+		input\unbind('s')
+		input\unbind('w')
+		input\unbind('a')
+		input\unbind('d')
