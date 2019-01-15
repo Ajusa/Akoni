@@ -13,7 +13,7 @@ Moan.setSpeed(0.05)
 CLASS = { }
 MAP = { }
 love.graphics.setDefaultFilter('nearest', 'nearest')
-local chars = love.graphics.newImage("images/char_spritesheet.png")
+chars = love.graphics.newImage("images/char_spritesheet.png")
 getChar = function(x, y)
   return love.graphics.newQuad(x + x * 16, y + y * 16, 16, 16, chars:getDimensions())
 end
@@ -49,7 +49,7 @@ love.load = function()
   camera = Camera(player.x, player.x, 2.5)
   camera.smoother = Camera.smooth.damped(10)
   MAP[map]:bump_init(world)
-  Moan.speak({
+  return Moan.speak({
     "Akoni",
     {
       0,
@@ -67,28 +67,36 @@ love.load = function()
       return player:enable()
     end
   })
-  return print(inspect(world:queryRect(0, 0, 10000, 10000, function(item)
-    return item.pad
-  end)[1].__class.__name, {
-    depth = 4
-  }))
 end
 love.update = function(dt)
   MAP[map]:update(dt)
-  input:update()
-  player:update(dt)
+  local x, y = camera:worldCoords(0, 0)
+  local items = world:queryRect(x, y, love.graphics.getWidth(), love.graphics.getHeight(), function(item)
+    return item.__class
+  end)
+  for _index_0 = 1, #items do
+    local item = items[_index_0]
+    item:update(dt)
+  end
   Moan.update(dt)
   player.x, player.y = world:move(player, player.x, player.y)
   return camera:lockPosition(player.x, player.y)
 end
 love.draw = function()
-  love.graphics.print("Lives: " .. player.x, 12, 12)
-  love.graphics.print("Score: " .. 3, 130, 12)
   local tx = math.floor(camera.x - (love.graphics.getWidth() / camera.scale) / 2)
   local ty = math.floor(camera.y - (love.graphics.getHeight() / camera.scale) / 2)
   MAP[map]:draw(-tx, -ty, camera.scale, camera.scale)
   camera:attach()
-  love.graphics.draw(chars, player.img, player.x - 3, player.y - 3)
+  local x, y = camera:worldCoords(0, 0)
+  local items = world:queryRect(x, y, love.graphics.getWidth(), love.graphics.getHeight(), function(item)
+    return item.__class
+  end)
+  for _index_0 = 1, #items do
+    local item = items[_index_0]
+    item:draw()
+  end
   camera:detach()
+  love.graphics.setFont(kenPixel)
+  love.graphics.print("FPS: " .. love.timer.getFPS(), 12, 12)
   return Moan.draw()
 end

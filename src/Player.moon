@@ -2,7 +2,12 @@ class Player extends Entity
 	scenes: "*"
 	new: =>
     	@x, @y = 500, 600
-    	@img = getChar(0, 11)
+    	@quad = getChar(0, 11)
+    	canvas = love.graphics.newCanvas()
+    	love.graphics.setCanvas(canvas)
+    	love.graphics.draw(chars, @quad, 0, 0)
+    	love.graphics.setCanvas()
+    	@img = love.graphics.newImage(canvas\newImageData!)
     	@pad = 3
     	@enable!
     	super!

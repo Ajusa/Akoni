@@ -11,3 +11,12 @@ export class Entity
 	update: (dt) =>
 		@x += @dx * dt
 		@y += @dy * dt
+	draw: =>
+		if @img then love.graphics.draw(@img, @x-@pad, @y-@pad)
+
+export class NPC extends Entity --currently unused
+	new: =>
+		super!
+	update: (dt) =>
+		@x += @dx * dt
+		@y += @dy * dt

@@ -38,7 +38,12 @@ do
   _class_0 = setmetatable({
     __init = function(self)
       self.x, self.y = 500, 600
-      self.img = getChar(0, 11)
+      self.quad = getChar(0, 11)
+      local canvas = love.graphics.newCanvas()
+      love.graphics.setCanvas(canvas)
+      love.graphics.draw(chars, self.quad, 0, 0)
+      love.graphics.setCanvas()
+      self.img = love.graphics.newImage(canvas:newImageData())
       self.pad = 3
       self:enable()
       return _class_0.__parent.__init(self)
