@@ -1,11 +1,4 @@
-cargo = require 'lib/cargo'
-sti = require "lib/sti"
-export Camera = require "lib/camera"
-Input = require 'lib/Input'
-bump = require 'lib/bump'
-Moan = require 'lib/Moan'
 require 'util'
-inspect = require 'lib/inspect'
 export world = bump.newWorld(16)
 kenPixel = love.graphics.newFont("lib/fonts/Kenney Pixel.ttf", 35)
 Moan.font = kenPixel
@@ -29,12 +22,9 @@ export changeMap = (name) ->
 		items = world\getItems()
 		for item in *items do if item.remove then item\remove! else world\remove(item)
 		MAP[map]\bump_init(world)
-		for _, obj in pairs MAP[map].objects
-			if obj.properties.map
-				p = obj.properties
-				CLASS["Teleport"](p.map, p.x, p.y, obj.x, obj.y, obj.width, obj.height)
-		--if tile.properties and tile.properties.collidable == true
-		for name, c in pairs CLASS do if c.__name == "Player" then export player = c! --guarentees player goes first
+		for _, obj in pairs MAP[map].objects --initialize any custom objects
+			if obj.properties.map then Teleport(obj)
+		for name, c in pairs CLASS do if name == "Player" then export player = c! --guarentees player goes first
 		for name, c in pairs CLASS do if c.scenes == map then c!
 love.keypressed = (key) -> Moan.keypressed(key)
 

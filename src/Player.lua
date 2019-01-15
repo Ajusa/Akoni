@@ -48,6 +48,7 @@ do
       love.graphics.setCanvas()
       self.img = love.graphics.newImage(canvas:newImageData())
       self.pad = 3
+      self.x, self.y = 32 * 16, 39 * 16
       self:enable()
       return _class_0.__parent.__init(self)
     end,

@@ -1,0 +1,873 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"set",
+				"setIndex"
+			],
+			[
+				"proces",
+				"processorToCache"
+			],
+			[
+				"block",
+				"blockBits"
+			],
+			[
+				"cacheto",
+				"cacheToProcessor"
+			],
+			[
+				"blocks",
+				"blockSize"
+			],
+			[
+				"off",
+				"blockOffset"
+			],
+			[
+				"proce",
+				"processorToCache"
+			],
+			[
+				"proc",
+				"processorToCache"
+			],
+			[
+				"mem",
+				"memoryToCache"
+			],
+			[
+				"lowe",
+				"lowestLRU"
+			],
+			[
+				"un",
+				"uint16_t"
+			],
+			[
+				"best",
+				"bestWeight"
+			],
+			[
+				"Int",
+				"INT_MAX"
+			],
+			[
+				"nu",
+				"num_pokemon"
+			],
+			[
+				"poke",
+				"num_pokemon"
+			],
+			[
+				"int",
+				"INT_MAX"
+			],
+			[
+				"dist",
+				"getDist"
+			],
+			[
+				"path",
+				"path_size"
+			],
+			[
+				"is",
+				"inMST"
+			],
+			[
+				"in",
+				"inMST"
+			],
+			[
+				"op",
+				"option_index"
+			],
+			[
+				"edge",
+				"edge_count"
+			],
+			[
+				"prev",
+				"prevLIDAR2"
+			],
+			[
+				"cus",
+				"custom_param2"
+			],
+			[
+				"Doo",
+				"DOOR"
+			],
+			[
+				"doo",
+				"doorPos"
+			],
+			[
+				"fix",
+				"fix_height"
+			],
+			[
+				"rota",
+				"rotate_left"
+			],
+			[
+				"rot",
+				"rotate_left"
+			],
+			[
+				"Halt",
+				"HALT"
+			],
+			[
+				"hazard",
+				"hazardA"
+			],
+			[
+				"WB",
+				"WBEND"
+			],
+			[
+				"haz",
+				"hazardDistance"
+			],
+			[
+				"haza",
+				"hazardA"
+			],
+			[
+				"IF",
+				"IFID"
+			],
+			[
+				"fiel",
+				"field1"
+			],
+			[
+				"if",
+				"IFID"
+			],
+			[
+				"P",
+				"PRINT"
+			],
+			[
+				"NO",
+				"NOOPINSTRUCTION"
+			],
+			[
+				"EX",
+				"EXMEM"
+			],
+			[
+				"Poke",
+				"Pokedex"
+			],
+			[
+				"index",
+				"indexType"
+			],
+			[
+				"tab2",
+				"tab2Index"
+			],
+			[
+				"update",
+				"updateIndex"
+			],
+			[
+				"col",
+				"column_name"
+			],
+			[
+				"column",
+				"column_name"
+			],
+			[
+				"pos",
+				"pos1"
+			],
+			[
+				"table",
+				"tablename1"
+			],
+			[
+				"tab",
+				"tab1"
+			],
+			[
+				"beg",
+				"begin"
+			],
+			[
+				"Alt",
+				"AltHold"
+			],
+			[
+				"delete",
+				"deleteFrom"
+			],
+			[
+				"Filter",
+				"FilterTable"
+			],
+			[
+				"F",
+				"SmallerFilter"
+			],
+			[
+				"read",
+				"readData"
+			],
+			[
+				"rea",
+				"readData"
+			],
+			[
+				"Table",
+				"TableEntry"
+			],
+			[
+				"for",
+				"for\tFor Loop"
+			],
+			[
+				"prin",
+				"printOrder"
+			],
+			[
+				"get",
+				"getline"
+			],
+			[
+				"emplace",
+				"emplace_back"
+			],
+			[
+				"found",
+				"foundGhost"
+			],
+			[
+				"buket",
+				"buckets"
+			],
+			[
+				"bucket",
+				"buckets"
+			],
+			[
+				"num",
+				"num_elements"
+			],
+			[
+				"k",
+				"kSmall"
+			],
+			[
+				"de",
+				"deobfuscate"
+			],
+			[
+				"textS",
+				"textSize"
+			],
+			[
+				"text",
+				"textSize"
+			],
+			[
+				"loca",
+				"location"
+			],
+			[
+				"sym",
+				"symbolTable"
+			],
+			[
+				"textSt",
+				"textStartingLine"
+			],
+			[
+				"reloca",
+				"relocTable"
+			],
+			[
+				"out",
+				"outFilePtr"
+			],
+			[
+				"te",
+				"textSize"
+			],
+			[
+				"reloc",
+				"relocTableSize"
+			],
+			[
+				"fir",
+				"firstLen"
+			],
+			[
+				"secon",
+				"secondLen"
+			],
+			[
+				"size",
+				"size_t"
+			],
+			[
+				"last",
+				"lastDifference"
+			],
+			[
+				"rand",
+				"random_numbers"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "main.moon",
+			"settings":
+			{
+				"buffer_size": 3038,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "util.moon",
+			"settings":
+			{
+				"buffer_size": 891,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/Player.moon",
+			"settings":
+			{
+				"buffer_size": 865,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"rename",
+				"Rename File"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"rena",
+				"Rename File"
+			],
+			[
+				"packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"git pu",
+				"git: pull"
+			],
+			[
+				"comm",
+				"git: commit including unstaged files"
+			],
+			[
+				"git pus",
+				"git: push"
+			],
+			[
+				"git comm",
+				"git: commit including unstaged files"
+			],
+			[
+				"git quic",
+				"git: quick commit"
+			],
+			[
+				"make",
+				"Build With: Make"
+			],
+			[
+				"git com",
+				"git: commit including unstaged files"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 157.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/arham/Documents/Projects/akoni"
+	],
+	"file_history":
+	[
+		"/C/Users/arham/Documents/Projects/akoni/.sublime-project",
+		"/C/Users/arham/Documents/Projects/akoni/src/Teleport.moon",
+		"/C/Users/arham/Downloads/nimgame/raw_data/sexy/urls_sexy.txt",
+		"/C/Users/arham/Downloads/nimgame/raw_data/porn/urls_porn.txt",
+		"/C/Users/arham/Documents/Projects/akoni/util.moon",
+		"/C/Users/arham/Documents/Projects/akoni/src/Player.lua",
+		"/C/Users/arham/Documents/Projects/akoni/src/House.moon",
+		"/C/Users/arham/Documents/Projects/akoni/util.lua",
+		"/C/Users/arham/Documents/Projects/akoni/main.lua",
+		"/C/Users/arham/Documents/Projects/akoni/main.moon",
+		"/C/Users/arham/Documents/Projects/akoni/lib/inspect.lua",
+		"/C/Users/arham/Documents/Projects/akoni/src/Player.moon",
+		"/C/Users/arham/Documents/Projects/akoni/lib/Moan.lua",
+		"/C/Users/arham/Documents/Projects/akoni/lib/camera.lua",
+		"/C/Users/arham/Documents/Projects/akoni/lib/bump.lua",
+		"/C/Users/arham/Documents/Projects/akoni/lib/Input.lua",
+		"/C/Users/arham/Documents/Projects/akoni/conf.moon",
+		"/C/Users/arham/Documents/Projects/akoni/conf.lua",
+		"/C/Users/arham/Documents/Projects/akoni/Player.moon",
+		"/C/Users/arham/Documents/Projects/akoni/lib/cargo/cargo.lua",
+		"/C/Users/arham/AppData/Roaming/Sublime Text 3/Packages/Moonscripty/Moonscript.sublime-settings",
+		"/C/Users/arham/AppData/Roaming/Sublime Text 3/Packages/User/Moonscript.sublime-settings",
+		"/C/Users/arham/Documents/Projects/akoni/README.md",
+		"/C/Program Files/pianobar-2018.10.30-x64/pianobar.cfg",
+		"/C/Users/arham/Documents/Projects/EECS-376/EECS 376 HW0 - Arham Jain.md",
+		"/C/Users/arham/Documents/Projects/cashmor/vue.config.js",
+		"/C/Users/arham/Documents/Projects/cashmor/readme.md",
+		"/C/Users/arham/Downloads/pianobar-2018.10.30-x64/README.md",
+		"/C/Users/arham/Downloads/output.zip",
+		"/C/Users/arham/Documents/Projects/cashmor/api/composer.json",
+		"/C/Users/arham/Documents/Projects/cashmor/index.php",
+		"/C/Users/arham/Documents/Projects/phpscrape/main.php",
+		"/C/Users/arham/Downloads/custom_control_door_handling.cpp",
+		"/C/Users/arham/Downloads/custom_control_navigation.cpp",
+		"/C/Users/arham/Documents/Projects/ardupilot/ArduCopter/control_custom.cpp",
+		"/C/Users/arham/Documents/Projects/EECS-281/lab10/samples.cpp",
+		"/C/Users/arham/Documents/Projects/EECS-370/project4/test-9.as.8.4.4",
+		"/C/Users/arham/Documents/Projects/EECS-370/project4/test-9.out",
+		"/C/Users/arham/Documents/Projects/EECS-370/project4/test_gen.py",
+		"/C/Users/arham/Documents/Projects/EECS-370/project4/test-5.as.128.8.128",
+		"/C/Users/arham/Documents/Projects/EECS-370/project4/test-5-MST.txt",
+		"/C/Users/arham/Documents/Projects/EECS-370/project4/out.txt",
+		"/C/Users/arham/Documents/Projects/EECS-370/project4/test.as",
+		"/C/Users/arham/Documents/Projects/EECS-370/project1s/main.c",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj04/test-3-MST.txt",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj04/test-1-MST.txt",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj04/test-2-MST.txt",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj04/test-6-FASTTSP.txt",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj04/test-4-MST.txt",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj04/out.txt",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj04/samples/sample-e-OPTTSP-out.txt",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj04/samples/sample-d-OPTTSP-out.txt",
+		"/C/Users/arham/Downloads/submission-F18P4-18.12.11.161054-arham.tar/submission-F18P4-18.12.11.161054-arham/main.cpp",
+		"/C/Users/arham/Downloads/submission-F18P4-18.12.11.154659-arham.tar/submission-F18P4-18.12.11.154659-arham/main.cpp",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj04/test-3-OPTTSP.txt",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj04/test-2-FASTTSP.txt",
+		"/C/Users/arham/Downloads/submission-F18P4-18.12.09.235755-arham.tar/submission-F18P4-18.12.09.235755-arham/main.cpp",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj04/samples/sample-ab-MST-out.txt",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj04/main.cpp",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj04/samples/sample-d-FASTTSP-out.txt",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj04/samples/sample-e-FASTTSP-out.txt",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj04/samples/sample-ab-FASTTSP-out.txt",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj04/samples/sample-c-MST-out.txt",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj04/Makefile",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj04/test.txt",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj04/samples/sample-e-MST-out.txt",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj04/samples/sample-d-MST-out.txt",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj04/samples/sample-e.txt",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj03/main.cpp",
+		"/C/Users/arham/Documents/Projects/EECS-281/lab09/connected_components.cpp",
+		"/C/Users/arham/Documents/Class/ENGR 100/Lab3 Files/Lab3 Files/AltHold.py",
+		"/C/Users/arham/Desktop/autocomplete.ahk",
+		"/C/Users/arham/Documents/Projects/EECS-281/lab08/avl_lab.cpp",
+		"/C/Users/arham/Documents/Projects/riotjsfun/todo.tag",
+		"/C/Users/arham/Documents/Projects/momPython/main.py",
+		"/C/Users/arham/Documents/Projects/nimx/main.php",
+		"/C/Users/arham/Documents/Projects/nimlibui/main.nim",
+		"/C/Users/arham/Documents/Projects/nigui/main.nim",
+		"/C/Users/arham/Documents/Projects/nimfltk/main.c",
+		"/C/Users/arham/Downloads/submission-F18P3-18.11.09.212829-arham.tar/submission-F18P3-18.11.09.212829-arham/main.cpp",
+		"/C/Users/arham/Documents/Projects/nimx/main.nim",
+		"/C/Users/arham/AppData/Roaming/Sublime Text 3/Packages/NimLime/NimLime.sublime-settings",
+		"/C/Users/arham/AppData/Roaming/Sublime Text 3/Packages/User/NimLime.sublime-settings",
+		"/C/Users/arham/Downloads/rev.py",
+		"/C/Users/arham/Documents/Projects/EECS-370/project3/test-beqlwsw.as",
+		"/C/Users/arham/Documents/Projects/EECS-370/project3/test-lwsw.as",
+		"/C/Users/arham/Documents/Projects/EECS-370/project3/small-lw-test.as",
+		"/C/Users/arham/Documents/Projects/EECS-370/project3/test-misc.as",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj03/test-11-table-commands.txt",
+		"/C/Users/arham/Documents/Projects/EECS-370/project3/test-beq.as",
+		"/C/Users/arham/Documents/Projects/EECS-370/project3/test-add.mc",
+		"/C/Users/arham/Documents/Projects/EECS-370/project3/main.as",
+		"/C/Users/arham/Documents/Projects/EECS-370/project3/test-spec.as",
+		"/C/Users/arham/Documents/Projects/EECS-370/project3/multiply.as",
+		"/C/Users/arham/Documents/Projects/EECS-370/project3/temp.as",
+		"/C/Users/arham/Documents/Projects/EECS-370/project3/test-w18.as",
+		"/C/Users/arham/Documents/Projects/EECS-370/project3/rand.as",
+		"/C/Users/arham/Documents/Projects/EECS-370/project3/break.as",
+		"/C/Users/arham/Documents/Projects/EECS-370/project2a/temp.as",
+		"/C/Users/arham/Documents/Projects/EECS-370/project3/main.c",
+		"/C/Users/arham/Documents/Projects/EECS-370/project1s/test.as",
+		"/C/Users/arham/Documents/Projects/EECS-370/project1s/test-add.as",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj03/test-5-table-commands.txt",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj03/test-6-table-commands.txt",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj03/test-3-table-commands.txt",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj03/test-4-table-commands.txt",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj03/test-2-table-commands.txt",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj03/out.txt",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj03/large/short-output.txt",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj03/large/short-input.txt",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj03/util.h",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj03/test-1-table-commands.txt​",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj03/large/long-quiet-output.txt",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj03/test.txt",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj03/spec_output.txt",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj03/spec_input.txt",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj03/benchmarks.txt",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj03/timecmd.bat",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj03/Operations.h",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj02/main.cpp",
+		"/C/Users/arham/Documents/Projects/EECS-281/proj03/Makefile",
+		"/C/Users/arham/Documents/Projects/EECS-281/lab07/main.cpp",
+		"/C/Users/arham/Documents/Projects/EECS-281/lab07/Makefile",
+		"/C/Users/arham/AppData/Local/Microsoft/Windows/INetCache/IE/Z0DVIDTL/.password[1].password",
+		"/C/Users/arham/Documents/Projects/ardupilot/ArduCopter/flight_mode.cpp",
+		"/C/Users/arham/Documents/Projects/EECS-370/project2z/out.mc",
+		"/C/Users/arham/Documents/Projects/EECS-370/project2z/combination.as",
+		"/C/Users/arham/Documents/Projects/EECS-370/project2z/runner.as"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"print",
+			"item",
+			"camera\\worldCo",
+			" world\\q",
+			"o.",
+			"changeMap",
+			"sample_ma",
+			"object.properties",
+			"world",
+			"MAP",
+			"map",
+			"require",
+			"if !",
+			":",
+			"=",
+			"world",
+			"oncomplete",
+			"player",
+			"Moan.keyreleased",
+			"selectButton",
+			" + 3",
+			"/ camera.scale",
+			"-tx",
+			"world",
+			"50",
+			"dy",
+			"bind",
+			"'sample_map'",
+			"levelMap",
+			"self.scale",
+			"zoom",
+			"camera",
+			"name",
+			"---",
+			"assets = cargo.init({\n  dir = 'src',\n  processors = {\n\t['*.lua'] = image, filename->\n\t\timage:setFilter('nearest', 'nearest')\n  }\n})"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "main.moon",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3038,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								670,
+								670
+							]
+						],
+						"settings":
+						{
+							"doccontinue.autostop": true,
+							"doccontinue.enabled": true,
+							"git_savvy.repo_path": "C:\\Users\\arham\\Documents\\Projects\\akoni",
+							"syntax": "Packages/Moonscripty/Syntaxes/MoonScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 164.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "util.moon",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 891,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								526,
+								518
+							]
+						],
+						"settings":
+						{
+							"doccontinue.autostop": true,
+							"doccontinue.enabled": true,
+							"git_savvy.repo_path": "C:\\Users\\arham\\Documents\\Projects\\akoni",
+							"syntax": "Packages/Moonscripty/Syntaxes/MoonScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/Player.moon",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 865,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								834,
+								834
+							]
+						],
+						"settings":
+						{
+							"doccontinue.autostop": true,
+							"doccontinue.enabled": true,
+							"git_savvy.repo_path": "C:\\Users\\arham\\Documents\\Projects\\akoni",
+							"syntax": "Packages/Moonscripty/Syntaxes/MoonScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 62.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.GitSavvy":
+	{
+		"height": 114.0
+	},
+	"output.astyle_error_message":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 114.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": ".sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"cust",
+				"control_custom.cpp"
+			],
+			[
+				"cus",
+				"control_custom.cpp"
+			],
+			[
+				"custom",
+				"control_custom.cpp"
+			],
+			[
+				"in",
+				"index.html"
+			],
+			[
+				"custo",
+				"control_custom.cpp"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 181.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 2
+	}
+}

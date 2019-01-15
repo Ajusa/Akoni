@@ -8,6 +8,7 @@ class Player extends Entity
     	love.graphics.setCanvas()
     	@img = love.graphics.newImage(canvas\newImageData!)
     	@pad = 3
+    	@x, @y = 32*16, 39*16
     	@enable!
     	super!
 	update: (dt) =>

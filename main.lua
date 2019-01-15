@@ -1,11 +1,4 @@
-local cargo = require('lib/cargo')
-local sti = require("lib/sti")
-Camera = require("lib/camera")
-local Input = require('lib/Input')
-local bump = require('lib/bump')
-local Moan = require('lib/Moan')
 require('util')
-local inspect = require('lib/inspect')
 world = bump.newWorld(16)
 local kenPixel = love.graphics.newFont("lib/fonts/Kenney Pixel.ttf", 35)
 Moan.font = kenPixel
@@ -39,12 +32,11 @@ changeMap = function(name)
     MAP[map]:bump_init(world)
     for _, obj in pairs(MAP[map].objects) do
       if obj.properties.map then
-        local p = obj.properties
-        CLASS["Teleport"](p.map, p.x, p.y, obj.x, obj.y, obj.width, obj.height)
+        Teleport(obj)
       end
     end
     for name, c in pairs(CLASS) do
-      if c.__name == "Player" then
+      if name == "Player" then
         player = c()
       end
     end
