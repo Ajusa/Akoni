@@ -8,8 +8,8 @@ return {
   height = 100,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 6,
-  nextobjectid = 1,
+  nextlayerid = 9,
+  nextobjectid = 4,
   properties = {},
   tilesets = {
     {
@@ -39,6 +39,36 @@ return {
     }
   },
   layers = {
+    {
+      type = "objectgroup",
+      id = 8,
+      name = "Teleport",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      draworder = "topdown",
+      properties = {},
+      objects = {
+        {
+          id = 3,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 576,
+          y = 560,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "sample_indoor",
+            ["x"] = 18,
+            ["y"] = 19
+          }
+        }
+      }
+    },
     {
       type = "tilelayer",
       id = 1,

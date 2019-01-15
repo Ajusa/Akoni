@@ -9,6 +9,13 @@ do
       if self.img then
         return love.graphics.draw(self.img, self.x - self.pad, self.y - self.pad)
       end
+    end,
+    collide = function(self, other)
+      return "slide"
+    end,
+    remove = function(self)
+      self.alive = false
+      return world:remove(self)
     end
   }
   _base_0.__index = _base_0
@@ -35,6 +42,7 @@ do
       if not (self.pad) then
         self.pad = 0
       end
+      self.alive = true
       return world:add(self, self.x, self.y, self.width - (2 * self.pad), self.height - (2 * self.pad))
     end,
     __base = _base_0,

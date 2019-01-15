@@ -1,7 +1,6 @@
 class Player extends Entity
-	scenes: "*"
+	scenes: '*'
 	new: =>
-    	@x, @y = 500, 600
     	@quad = getChar(0, 11)
     	canvas = love.graphics.newCanvas()
     	love.graphics.setCanvas(canvas)
@@ -28,3 +27,6 @@ class Player extends Entity
 		input\unbind('w')
 		input\unbind('a')
 		input\unbind('d')
+	teleport: (x, y) => 
+		world\update(self, x, y)
+		@x, @y = x, y

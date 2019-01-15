@@ -3,7 +3,7 @@ do
   local _class_0
   local _parent_0 = Entity
   local _base_0 = {
-    scenes = "*",
+    scenes = '*',
     update = function(self, dt)
       self.dx, self.dy = 0, 0
       if input:down('down') then
@@ -31,13 +31,16 @@ do
       input:unbind('w')
       input:unbind('a')
       return input:unbind('d')
+    end,
+    teleport = function(self, x, y)
+      world:update(self, x, y)
+      self.x, self.y = x, y
     end
   }
   _base_0.__index = _base_0
   setmetatable(_base_0, _parent_0.__base)
   _class_0 = setmetatable({
     __init = function(self)
-      self.x, self.y = 500, 600
       self.quad = getChar(0, 11)
       local canvas = love.graphics.newCanvas()
       love.graphics.setCanvas(canvas)
