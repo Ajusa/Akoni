@@ -8,7 +8,7 @@ return {
   height = 100,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 9,
+  nextlayerid = 12,
   nextobjectid = 4,
   properties = {},
   tilesets = {
@@ -39,36 +39,6 @@ return {
     }
   },
   layers = {
-    {
-      type = "objectgroup",
-      id = 8,
-      name = "Teleport",
-      visible = true,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      draworder = "topdown",
-      properties = {},
-      objects = {
-        {
-          id = 3,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 576,
-          y = 560,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["map"] = "sample_indoor",
-            ["x"] = 18,
-            ["y"] = 19
-          }
-        }
-      }
-    },
     {
       type = "tilelayer",
       id = 1,
@@ -101,7 +71,7 @@ return {
       properties = {},
       encoding = "base64",
       compression = "zlib",
-      data = "eJzt1VsKglAUhtGDPnSbVGnjiOZRjaMaVo0oIw+IEEhJ7mAt+N9lfxxMCQAAAAAAxrMoUlq2WxVTfw1V06Butx3Q41KmdO2MceR3UXe2HvBG+j00+U7usOm1GPpG9BhX9aZD3lGPnzq0N5/3OsyanT74f+gxjtwlb0iLJz1i0SMWPWLRIxY9YtEjFj1i0SOOfXP7c3t/PaZ3b26/8z5CuZWvLt0BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/5QHqND18"
+      data = "eJzt2VtOwkAUgOEWHrxtSsF1GF9chboMrWzDjRhZkTW0sRlaHWWAE/N9yUm4JuT8DCFQVQAAAAAAUM7ZrKrOu7mYHfvVsGgbLLu5zujxMq+q1WAooz8Xy8FcZpyRtIcmu+k7XCUtxs7Iqt5+vh5lLSY69PPQzrrezLMee3ff7fw06XDSzmPyWeV8HE7fpZ+0xSc9YtEjFj1i0SMWPWLRIxY9YtEjlrTHbbv7ptu/HoeX9li3u79xPo5m7PPqfb7pMhy2NfXX74Cvhf5XGutBnn3sTo+/K7W74Tl7G1yeGsaV6uFMlKFHLHrEkrvHnx6nRxlTe7yb5z0u937yTO0xvV2P/Wu++W6a3p5ef0quj/2Pzu/s8p52HsrTIxY9YtEjFj1i0SMWPf4PPQAAAAAAAAAAAAAAAAAAAAAAAACA3gfGHHlA"
     },
     {
       type = "tilelayer",
@@ -120,7 +90,7 @@ return {
       },
       encoding = "base64",
       compression = "zlib",
-      data = "eJzt2s1qFEEQwPHs18FTTooixOjJR4g+QcCLWQVfQIMbTz6AyMIqahS9aPCqdxUfIhFUBC9eFQ/qW9jNTJPa2uqerwXNzP8Hzex87G7omurqns3KCgAAAAAAAAAcTVv9f/0XtMOlvr2t45Hx3rE49rJX/7O7wPf9rG9vg5nRx9axYOLO7Yjzu5F4bJJPC2Kx0P2dyplT6twrt/+6b18j4zElHguK8iNsrXz47o79yI/rnIgdY7xKS+WHlScxMie+9RaPfe1l7QXxSKoTi9Q8Sp67a5zX+bHKmDUnFoOwLZrDlq3J4TofD+p4XFHd0NdqZWvyVMSDOh6XGqv0WqJsLUlJ1fM3rr117V3zrzmyyqw/vNM1YvHEeE+Ih/88PW79cu23a3+qf1VrlKnl1jh1pmaupNYf6+7cWdfOdXgOVmZepffX8n0Zk2ejct/n48GcKs6aV4V8uD2Mv2+tQp9uuM/ZH2SvQ34QE5s1r7LqR2CNUxuJuGmsz9OarssDq3bLeh3imIrHxOXQrUG1720ba6zSsZD9NHbbK/nrq/nWioVnrTNCPHTfX3b1Z9vt3+x4PFK1O4xZZfvpWn7900Rt9/G43qfvy5J1Y693+BzwfYP6K5+56PHqZ4Xa0zV6rGpSe/X867j4zIejxfa45Hy57VK/A8biIe/3fXd/H7j2Ib/PZQ0PMZF59kW8jrUus+ZRm2oupPtc2hkcNi9Vw2Oa/F7fBVMVD9nnByo2k/x4ap5atAZcxnPKtgnPcq3a6/v8wTDr8wujrF3Mx3s/T7oh5krWbxusAZvZUvkxGczniM4Hf93J/LXPrXFBHTrmYnt+EG+whX68N8xywLf7w/l8kNeFOO4m4lH03IqxKy7040e3/ZS3z73F+71oDkt+NLeXmJvq43r/udq/k9/zPNOtr8n/gRTVb/KjujpzolU1D4jR642i/01F1qcnGrw3kH0d+1/HsM+6MK7JmkG+d1bh3ic34pYVDywH8fi/EI/2IB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACD4CwlywUw="
+      data = "eJzt2k1u00AUwPHEThasWIFASKWw4giFEyCxgYDEBaAiZcUJEFJAQEGwZQt74BQtErDuFsQCuAUzyoyYvLz5sOtA6/x/0six49jVvLx5M04HAwAAAAAAAAA4nm5U//sv6Idrlb5t47ny2Ulw7M2w/bXXge37WaVvvZnSx9oxb2re2wne343E4yr5tCQWC9nfqZw5K957a/bfVfo5YTweEY8lufzwWy0fvplj391xmROxY0hL5YeWJzFhThwMl4+hTJtYpOZR4XsPC+5/kngtiMXAb3Nz2NKaHJ5HHY/L1Q15rlRak8PzqONxqbFKriVKa0lb7037YNrH1d7mSCtZf1jnWsTiZeIz9npy3Ppp2i/Tfje/VW+U1HJtnDrfQa7IcWvTzMsumHZxjdfwJfMqub/h9sOYvB6X35M5VZw2r/L58GAU/9xGgz7dMtfZqxePEROdNq/S6oenjVNbibihmcOuyz2tdof1uqTeTE0O3a/z5/WZNlbJWIT9NDHbm+71LbeNzaNS6wzZ99dN/dk2+/fWPB6p2u3HrNJ+uu3Of5Wp7Xcq+r7UYX6Likk9c/lB7YlqUzdi5PzrVPD62Xi5vWgwX+6z3O+AmvD7vme+3/umfXLf87CGN5kTY06LgXyOIfs8tFP/bVabZ4WrGCP7RPZp2Of7IjZTd7xknhpbA676OeVx5J/larXX9vnT0bzPL4/n7Yob7+086W4wV+K3je7JmEzrxRzR8uGM29rcmmRicsLE9lIdb0h7PJrngG1P3DilrR18HHcT8cg9t2Lsyvs8HAy+uPY18iy8yRyW/DgaeKbbnS77kvz4N0pjJtcbbdak6+h0B9cI+zr2v45+n3Xh6s0afPfJDQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA9QctioWI"
     },
     {
       type = "tilelayer",
@@ -155,6 +125,36 @@ return {
       encoding = "base64",
       compression = "zlib",
       data = "eJztzgENAAAIA6CbyP7tjKGbkIAEAAAAAAAAAAAAAG7q2h4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHw3dOgAx"
+    },
+    {
+      type = "objectgroup",
+      id = 8,
+      name = "Teleport",
+      visible = false,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      draworder = "topdown",
+      properties = {},
+      objects = {
+        {
+          id = 3,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 480,
+          y = 608,
+          width = 16,
+          height = 8,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "sample_indoor",
+            ["x"] = 18,
+            ["y"] = 19
+          }
+        }
+      }
     }
   }
 }

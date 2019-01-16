@@ -6,9 +6,10 @@ Moan.font = kenPixel
 Moan.setSpeed(0.05)
 export CLASS = {}
 export MAP = {}
+export EVENT = {}
+export STATE = {}
 love.graphics.setDefaultFilter('nearest', 'nearest')
 export chars = love.graphics.newImage("images/char_spritesheet.png")
-export getChar = (x, y) -> love.graphics.newQuad(x + x*16, y + y*16, 16, 16, chars\getDimensions())
 --love.window.setFullscreen(true)
 export vItems = ->
 	x,y = camera\worldCoords(0, 0)
@@ -46,23 +47,28 @@ love.load = ->
 	})(true)
 	camera = Camera(0, 0, 2.5)
 	camera.smoother = Camera.smooth.damped(10)
-	changeMap("sample_map")
-	player\teleport(32*16, 39*16)
-	Moan.speak({"Akoni", {0,255,0}}, {"Welcome to the game!", "This is a fun game!"}, {
-		onstart: () -> player\disable!,
-		oncomplete: ()-> player\enable!
-	})
+	table.insert(EVENT, ->
+		changeMap("sample_map")
+		player\teleport(32*16, 39*16)
+		
+	)
 	--input\unbindAll()
 	
 love.update = (dt) ->
+	Timer.update(dt)
+	for i = #EVENT, 1, -1
+	    EVENT[i]!
+		table.remove(EVENT)
 	MAP[map]\update(dt)
 	camera\lockPosition(player.x, player.y)
 	for item in *vItems!
-		if item.alive --feels like a garbage collector
-			item\update(dt)
-			item.x, item.y, cols = world\move(item, item.x, item.y)
-			for col in *cols do if col.other.collide and col.other.alive then col.other\collide(item) --this might lead to double collisions? idk
+		item\update(dt)
+		if item.alive
+			filter = if item.filter then item.filter else (i, o) -> "slide"
+			item.x, item.y, cols = world\move(item, item.x, item.y, filter)
+			for col in *cols do if col.other.collide then col.other\collide(item) --this might lead to double collisions? idk
 	Moan.update(dt)
+	
 love.draw = ->
 	tx = math.floor(camera.x - (love.graphics.getWidth()/camera.scale) / 2)
 	ty = math.floor(camera.y - (love.graphics.getHeight()/camera.scale) / 2)

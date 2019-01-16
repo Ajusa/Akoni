@@ -1,26 +1,31 @@
-local Teleport
+local Orc
 do
   local _class_0
-  local _parent_0 = Entity
+  local _parent_0 = NPC
   local _base_0 = {
-    scenes = "",
-    collide = function(self, other)
-      changeMap(self.to)
-      return player:teleport(self.x * 16, self.y * 16)
+    scenes = 'sample_map',
+    update = function(self, dt)
+      local angle = math.atan2(player.y - self.y, player.x - self.x)
+      self.dx, self.dy = self.speed * math.cos(angle), self.speed * math.sin(angle)
+      if self.health <= 0 then
+        self:remove()
+      end
+      return _class_0.__parent.__base.update(self, dt)
     end
   }
   _base_0.__index = _base_0
   setmetatable(_base_0, _parent_0.__base)
   _class_0 = setmetatable({
-    __init = function(self, to, tx, ty, x, y, width, height)
-      self.x, self.y = x, y
-      self.width, self.height = width, height
-      self.to = to
-      self.tx, self.ty = tx, ty
+    __init = function(self)
+      self:getChar(0, 3)
+      self.pad = 3
+      self.x, self.y = 35 * 16, 45 * 16
+      self.health = 5
+      self.speed = 50
       return _class_0.__parent.__init(self)
     end,
     __base = _base_0,
-    __name = "Teleport",
+    __name = "Orc",
     __parent = _parent_0
   }, {
     __index = function(cls, name)
@@ -44,6 +49,6 @@ do
   if _parent_0.__inherited then
     _parent_0.__inherited(_parent_0, _class_0)
   end
-  Teleport = _class_0
+  Orc = _class_0
   return _class_0
 end

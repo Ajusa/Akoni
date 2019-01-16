@@ -5,11 +5,10 @@ Moan.font = kenPixel
 Moan.setSpeed(0.05)
 CLASS = { }
 MAP = { }
+EVENT = { }
+STATE = { }
 love.graphics.setDefaultFilter('nearest', 'nearest')
 chars = love.graphics.newImage("images/char_spritesheet.png")
-getChar = function(x, y)
-  return love.graphics.newQuad(x + x * 16, y + y * 16, 16, 16, chars:getDimensions())
-end
 vItems = function()
   local x, y = camera:worldCoords(0, 0)
   return world:queryRect(x, y, love.graphics.getWidth(), love.graphics.getHeight(), function(item)
@@ -76,40 +75,37 @@ love.load = function()
   })(true)
   camera = Camera(0, 0, 2.5)
   camera.smoother = Camera.smooth.damped(10)
-  changeMap("sample_map")
-  player:teleport(32 * 16, 39 * 16)
-  return Moan.speak({
-    "Akoni",
-    {
-      0,
-      255,
-      0
-    }
-  }, {
-    "Welcome to the game!",
-    "This is a fun game!"
-  }, {
-    onstart = function()
-      return player:disable()
-    end,
-    oncomplete = function()
-      return player:enable()
-    end
-  })
+  return table.insert(EVENT, function()
+    changeMap("sample_map")
+    return player:teleport(32 * 16, 39 * 16)
+  end)
 end
 love.update = function(dt)
+  Timer.update(dt)
+  for i = #EVENT, 1, -1 do
+    EVENT[i]()
+    table.remove(EVENT)
+  end
   MAP[map]:update(dt)
   camera:lockPosition(player.x, player.y)
   local _list_0 = vItems()
   for _index_0 = 1, #_list_0 do
     local item = _list_0[_index_0]
+    item:update(dt)
     if item.alive then
-      item:update(dt)
+      local filter
+      if item.filter then
+        filter = item.filter
+      else
+        filter = function(i, o)
+          return "slide"
+        end
+      end
       local cols
-      item.x, item.y, cols = world:move(item, item.x, item.y)
+      item.x, item.y, cols = world:move(item, item.x, item.y, filter)
       for _index_1 = 1, #cols do
         local col = cols[_index_1]
-        if col.other.collide and col.other.alive then
+        if col.other.collide then
           col.other:collide(item)
         end
       end

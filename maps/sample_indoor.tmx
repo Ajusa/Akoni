@@ -7,8 +7,8 @@
   <object id="3" x="272" y="336" width="48" height="16">
    <properties>
     <property name="map" value="sample_map"/>
-    <property name="x" value="32"/>
-    <property name="y" value="38"/>
+    <property name="x" value="30"/>
+    <property name="y" value="39"/>
    </properties>
   </object>
  </objectgroup>

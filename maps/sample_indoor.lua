@@ -64,8 +64,8 @@ return {
           visible = true,
           properties = {
             ["map"] = "sample_map",
-            ["x"] = "32",
-            ["y"] = "38"
+            ["x"] = "30",
+            ["y"] = "39"
           }
         }
       }

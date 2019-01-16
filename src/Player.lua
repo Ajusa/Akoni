@@ -1,52 +1,66 @@
 local Player
 do
   local _class_0
-  local _parent_0 = Entity
+  local _parent_0 = NPC
   local _base_0 = {
     scenes = '*',
     update = function(self, dt)
       self.dx, self.dy = 0, 0
       if input:down('down') then
-        self.dy = 100
+        self.dy = self.speed
       end
       if input:down('up') then
-        self.dy = -100
+        self.dy = -self.speed
       end
       if input:down('left') then
-        self.dx = -100
+        self.dx = -self.speed
       end
       if input:down('right') then
-        self.dx = 100
+        self.dx = self.speed
       end
-      return _class_0.__parent.update(self, dt)
+      if input:down('attack', 0.5) then
+        self:attack()
+      end
+      return _class_0.__parent.__base.update(self, dt)
     end,
     enable = function(self)
       input:bind('s', 'down')
       input:bind('w', 'up')
       input:bind('a', 'left')
-      return input:bind('d', 'right')
+      input:bind('d', 'right')
+      return input:bind('space', 'attack')
     end,
     disable = function(self)
       input:unbind('s')
       input:unbind('w')
       input:unbind('a')
-      return input:unbind('d')
+      input:unbind('d')
+      return input:unbind('space')
     end,
-    teleport = function(self, x, y)
-      world:update(self, x, y)
-      self.x, self.y = x, y
+    filter = function(self, o)
+      if o.__class and o.__class.__name == "Dagger" then
+        return "cross"
+      else
+        return "slide"
+      end
+    end,
+    attack = function(self)
+      local x, y = camera:worldCoords(love.mouse.getPosition())
+      local angle = math.atan2(y - self.y, x - self.x)
+      return Dagger({
+        x = self.x + 5,
+        y = self.y + 5,
+        speed = 80,
+        angle = angle
+      })
     end
   }
   _base_0.__index = _base_0
   setmetatable(_base_0, _parent_0.__base)
   _class_0 = setmetatable({
     __init = function(self)
-      self.quad = getChar(0, 11)
-      local canvas = love.graphics.newCanvas()
-      love.graphics.setCanvas(canvas)
-      love.graphics.draw(chars, self.quad, 0, 0)
-      love.graphics.setCanvas()
-      self.img = love.graphics.newImage(canvas:newImageData())
+      self:getChar(0, 0)
+      self.data = { }
       self.pad = 3
       self.x, self.y = 32 * 16, 39 * 16
       self:enable()
