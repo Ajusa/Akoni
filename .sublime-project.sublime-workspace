@@ -476,6 +476,9 @@
 	],
 	"file_history":
 	[
+		"/C/Users/arham/Documents/Projects/akoni/maps/sample_indoor.lua",
+		"/C/Users/arham/Downloads/csp-wk1-template.md",
+		"/C/Users/arham/Documents/Projects/eecs-201/week01/homework/hw1.md",
 		"/C/Users/arham/Documents/Projects/akoni/src/Blacksmith.lua",
 		"/C/Users/arham/Documents/Projects/akoni/util.moon",
 		"/C/Users/arham/Documents/Projects/akoni/lib/bind.lua",
@@ -600,14 +603,11 @@
 		"/C/Users/arham/Documents/Projects/EECS-281/proj03/spec_input.txt",
 		"/C/Users/arham/Documents/Projects/EECS-281/proj03/benchmarks.txt",
 		"/C/Users/arham/Documents/Projects/EECS-281/proj03/timecmd.bat",
-		"/C/Users/arham/Documents/Projects/EECS-281/proj03/Operations.h",
-		"/C/Users/arham/Documents/Projects/EECS-281/proj02/main.cpp",
-		"/C/Users/arham/Documents/Projects/EECS-281/proj03/Makefile",
-		"/C/Users/arham/Documents/Projects/EECS-281/lab07/main.cpp"
+		"/C/Users/arham/Documents/Projects/EECS-281/proj03/Operations.h"
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 25.0
 	},
 	"find_in_files":
 	{
@@ -797,8 +797,8 @@
 						"selection":
 						[
 							[
-								470,
-								470
+								180,
+								180
 							]
 						],
 						"settings":
@@ -901,7 +901,7 @@
 	"project": ".sublime-project",
 	"replace":
 	{
-		"height": 72.0
+		"height": 46.0
 	},
 	"save_all_on_build": true,
 	"select_file":
