@@ -8,6 +8,7 @@ inspect = require('lib/inspect')
 Timer = require('lib/timer')
 Convoke = require('lib/convoke')
 Bind = require('lib/bind')
+Luven = require("lib/luven/luven")
 do
   local _class_0
   local _base_0 = {

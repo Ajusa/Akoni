@@ -28,7 +28,7 @@ class Blacksmith extends NPC
 	    wait!
 	    player.data.weapon = true
 	    player\say({"Inventory", {0,255,0}}, {"You recieved bronze blade."}, cont!)
-	    player\say({"Objective", {255,0,0}}, {"Ask the tavern server where Blacksmith Bono’s lucky ring is and return in to Bono."})
+	    player\say({"Objective", {255,0,0}}, {"Ask the tavern server where Blacksmith Bono’s lucky ring is and return it to Bono."})
 	    player.data.token = {started: true}
 	inQuest: => @say("Blacksmith", {"Well, get a move on! I haven't got all day."})
 		

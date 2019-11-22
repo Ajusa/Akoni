@@ -16,6 +16,7 @@ export vItems = ->
 	return world\queryRect(x, y, love.graphics.getWidth!, love.graphics.getHeight!, (item) -> item.__class)
 export camera
 export player
+export player_light
 map = ""
 export changeMap = (name) -> 
 	unless map == name
@@ -45,8 +46,13 @@ love.load = ->
 				if fn\match("[^.]+$") == 'lua' MAP[fn\match("^.+/(.+)$")\sub(1, -5)] = sti(fn, { "bump" }) 
 		}
 	})(true)
+	Luven.init(love.graphics.getWidth(), love.graphics.getHeight(), false)
+	Luven.setAmbientLightColor({ 0.2, 0.2, 0.2 })
 	camera = Camera(0, 0, 2.5)
+	--Luven.camera\init(love.graphics.getWidth() / 2, love.graphics.getHeight() / 2)
+    --Luven.camera\setScale(2.5)
 	camera.smoother = Camera.smooth.damped(10)
+	player_light = Luven.addNormalLight(0, 0, { 0.9, 1, 0 }, 1, Luven.lightShapes.cone, 0)
 	table.insert(EVENT, ->
 		changeMap("sample_map")
 		player\teleport(32*16, 39*16)
@@ -61,6 +67,9 @@ love.update = (dt) ->
 		table.remove(EVENT)
 	MAP[map]\update(dt)
 	camera\lockPosition(player.x, player.y)
+	Luven.update(dt)
+	Luven.setLightPosition(player_light, player.x, player.y)
+	--Luven.camera\setPosition(player.x, player.y)
 	for item in *vItems!
 		item\update(dt)
 		if item.alive
@@ -74,7 +83,9 @@ love.draw = ->
 	ty = math.floor(camera.y - (love.graphics.getHeight()/camera.scale) / 2)
 	MAP[map]\draw(-tx, -ty, camera.scale, camera.scale)
 	camera\attach()
+	Luven.drawBegin()
 	for item in *vItems! do item\draw!
+	Luven.drawEnd()
 	--love.graphics.setColor(255, 0, 0)
 	--MAP[map]\bump_draw(world)
 	camera\detach()

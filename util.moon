@@ -9,6 +9,7 @@ inspect = require 'lib/inspect'
 Timer = require 'lib/timer'
 Convoke = require 'lib/convoke'
 Bind = require 'lib/bind'
+Luven = require "lib/luven/luven"
 class Entity
 	new: =>
 		@x = unless @x then 0

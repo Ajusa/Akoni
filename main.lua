@@ -73,8 +73,19 @@ love.load = function()
       end
     }
   })(true)
+  Luven.init(love.graphics.getWidth(), love.graphics.getHeight(), false)
+  Luven.setAmbientLightColor({
+    0.2,
+    0.2,
+    0.2
+  })
   camera = Camera(0, 0, 2.5)
   camera.smoother = Camera.smooth.damped(10)
+  player_light = Luven.addNormalLight(0, 0, {
+    0.9,
+    1,
+    0
+  }, 1, Luven.lightShapes.cone, 0)
   return table.insert(EVENT, function()
     changeMap("sample_map")
     return player:teleport(32 * 16, 39 * 16)
@@ -88,6 +99,8 @@ love.update = function(dt)
   end
   MAP[map]:update(dt)
   camera:lockPosition(player.x, player.y)
+  Luven.update(dt)
+  Luven.setLightPosition(player_light, player.x, player.y)
   local _list_0 = vItems()
   for _index_0 = 1, #_list_0 do
     local item = _list_0[_index_0]
@@ -118,11 +131,13 @@ love.draw = function()
   local ty = math.floor(camera.y - (love.graphics.getHeight() / camera.scale) / 2)
   MAP[map]:draw(-tx, -ty, camera.scale, camera.scale)
   camera:attach()
+  Luven.drawBegin()
   local _list_0 = vItems()
   for _index_0 = 1, #_list_0 do
     local item = _list_0[_index_0]
     item:draw()
   end
+  Luven.drawEnd()
   camera:detach()
   love.graphics.setFont(kenPixel)
   love.graphics.print("FPS: " .. love.timer.getFPS(), 12, 12)
