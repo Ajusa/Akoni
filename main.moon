@@ -31,6 +31,7 @@ export changeMap = (name) ->
 love.keypressed = (key) -> Moan.keypressed(key)
 
 love.load = ->
+	love.window.setFullscreen(true)
 	export input = Input()
 	cargo.init({
 	dir: 'src',
@@ -57,7 +58,7 @@ love.load = ->
     Luven.camera\init(love.graphics.getWidth() / 2, love.graphics.getHeight() / 2)
     Luven.camera\setScale(2.5)
     --Luven.camera\setMoveSmooth(10, 10)
-	--player_light = Luven.addNormalLight(0, 0, { 0.9, 1, 0 }, 1, Luven.lightShapes.cone, 0)
+	player_light = Luven.addNormalLight(0, 0, { 0.9, 1, 0 }, 1, Luven.lightShapes.round, 0)
 	table.insert(EVENT, ->
 		changeMap("sample_map")
 		player\teleport(32*16, 39*16)
@@ -75,7 +76,7 @@ love.update = (dt) ->
 	--camera\lockPosition(player.x, player.y)
 	Luven.update(dt)
 	Luven.camera\smooth(player.x, player.y, Camera.smooth.damped(10))
-	--Luven.setLightPosition(player_light, player.x, player.y)
+	Luven.setLightPosition(player_light, player.x, player.y)
 	--Luven.camera\setPosition(player.x, player.y)
 	for item in *vItems!
 		item\update(dt)
