@@ -10,7 +10,7 @@ STATE = { }
 love.graphics.setDefaultFilter('nearest', 'nearest')
 chars = love.graphics.newImage("images/char_spritesheet.png")
 vItems = function()
-  local x, y = camera:worldCoords(0, 0)
+  local x, y = Luven.camera:worldCoords(0, 0)
   return world:queryRect(x, y, love.graphics.getWidth(), love.graphics.getHeight(), function(item)
     return item.__class
   end)
@@ -73,19 +73,16 @@ love.load = function()
       end
     }
   })(true)
-  Luven.init(love.graphics.getWidth(), love.graphics.getHeight(), false)
-  Luven.setAmbientLightColor({
-    0.2,
-    0.2,
-    0.2
-  })
   camera = Camera(0, 0, 2.5)
   camera.smoother = Camera.smooth.damped(10)
-  player_light = Luven.addNormalLight(0, 0, {
-    0.9,
-    1,
-    0
-  }, 1, Luven.lightShapes.cone, 0)
+  Luven.init()
+  Luven.setAmbientLightColor({
+    0.5,
+    0.5,
+    0.5
+  })
+  Luven.camera:init(love.graphics.getWidth() / 2, love.graphics.getHeight() / 2)
+  Luven.camera:setScale(2.5)
   return table.insert(EVENT, function()
     changeMap("sample_map")
     return player:teleport(32 * 16, 39 * 16)
@@ -98,9 +95,8 @@ love.update = function(dt)
     table.remove(EVENT)
   end
   MAP[map]:update(dt)
-  camera:lockPosition(player.x, player.y)
   Luven.update(dt)
-  Luven.setLightPosition(player_light, player.x, player.y)
+  Luven.camera:smooth(player.x, player.y, Camera.smooth.damped(10))
   local _list_0 = vItems()
   for _index_0 = 1, #_list_0 do
     local item = _list_0[_index_0]
@@ -127,10 +123,9 @@ love.update = function(dt)
   return Moan.update(dt)
 end
 love.draw = function()
-  local tx = math.floor(camera.x - (love.graphics.getWidth() / camera.scale) / 2)
-  local ty = math.floor(camera.y - (love.graphics.getHeight() / camera.scale) / 2)
-  MAP[map]:draw(-tx, -ty, camera.scale, camera.scale)
-  camera:attach()
+  local tx = math.floor(Luven.camera.x - (love.graphics.getWidth() / Luven.camera.scaleX) / 2)
+  local ty = math.floor(Luven.camera.y - (love.graphics.getHeight() / Luven.camera.scaleY) / 2)
+  MAP[map]:draw(-tx, -ty, Luven.camera.scaleX, Luven.camera.scaleY)
   Luven.drawBegin()
   local _list_0 = vItems()
   for _index_0 = 1, #_list_0 do
@@ -138,7 +133,6 @@ love.draw = function()
     item:draw()
   end
   Luven.drawEnd()
-  camera:detach()
   love.graphics.setFont(kenPixel)
   love.graphics.print("FPS: " .. love.timer.getFPS(), 12, 12)
   return Moan.draw()

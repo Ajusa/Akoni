@@ -183,6 +183,7 @@ function luven.camera:draw()
 end
 
 function luven.camera:setPosition(x, y)
+
     self.x = x
     self.y = y
     self.useTarget = false
@@ -192,6 +193,11 @@ function luven.camera:move(dx, dy)
     self.x = self.x + dx
     self.y = self.y + dy
     self.useTarget = false
+end
+
+function luven.camera:smooth(x, y, smooth)
+    self:move(smooth(x - self.x, y - self.y))
+    -- body
 end
 
 function luven.camera:setMoveSmooth(x, y)
@@ -653,5 +659,16 @@ end
 function luven.getLightScale(lightId)
     return currentLights[lightId].scaleX, currentLights[lightId].scaleY
 end
+
+--Arham Code
+function luven.camera:worldCoords(x,y, ox,oy,w,h)
+    ox, oy = ox or 0, oy or 0
+    w,h = w or love.graphics.getWidth(), h or love.graphics.getHeight()
+    local c,s = math.cos(-self.rotation), math.sin(-self.rotation)
+    x,y = (x - w/2 - ox) / self.scaleX, (y - h/2 - oy) / self.scaleY
+    x,y = c*x - s*y, s*x + c*y
+    return x+self.x, y+self.y
+end
+
 
 return luven
