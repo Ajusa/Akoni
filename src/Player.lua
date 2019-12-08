@@ -45,7 +45,7 @@ do
       end
     end,
     attack = function(self)
-      local x, y = camera:worldCoords(love.mouse.getPosition())
+      local x, y = Luven.camera:worldCoords(love.mouse.getPosition())
       local angle = math.atan2(y - self.y, x - self.x)
       return Dagger({
         x = self.x + 5,

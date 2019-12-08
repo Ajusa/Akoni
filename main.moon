@@ -31,7 +31,6 @@ export changeMap = (name) ->
 love.keypressed = (key) -> Moan.keypressed(key)
 
 love.load = ->
-	love.window.setFullscreen(true)
 	export input = Input()
 	cargo.init({
 	dir: 'src',
@@ -47,24 +46,16 @@ love.load = ->
 				if fn\match("[^.]+$") == 'lua' MAP[fn\match("^.+/(.+)$")\sub(1, -5)] = sti(fn, { "bump" }) 
 		}
 	})(true)
-	--Luven.init(love.graphics.getWidth(), love.graphics.getHeight(), false)
-	--1Luven.setAmbientLightColor({ 0.2, 0.2, 0.2 })
-	camera = Camera(0, 0, 2.5)
-	--Luven.camera\init(love.graphics.getWidth() / 2, love.graphics.getHeight() / 2)
-    --Luven.camera\setScale(2.5)
-	camera.smoother = Camera.smooth.damped(10)
 	Luven.init()
     Luven.setAmbientLightColor({ 0.5, 0.5, 0.5 })
     Luven.camera\init(love.graphics.getWidth() / 2, love.graphics.getHeight() / 2)
     Luven.camera\setScale(2.5)
-    --Luven.camera\setMoveSmooth(10, 10)
 	player_light = Luven.addNormalLight(0, 0, { 0.9, 1, 0 }, 1, Luven.lightShapes.round, 0)
 	table.insert(EVENT, ->
 		changeMap("sample_map")
 		player\teleport(32*16, 39*16)
 		
 	)
-	--Luven.addNormalLight(700, 500, { 0.9, 1, 0 }, 1, Luven.lightShapes.cone, 0)
 	--input\unbindAll()
 	
 love.update = (dt) ->
@@ -73,11 +64,9 @@ love.update = (dt) ->
 	    EVENT[i]!
 		table.remove(EVENT)
 	MAP[map]\update(dt)
-	--camera\lockPosition(player.x, player.y)
 	Luven.update(dt)
 	Luven.camera\smooth(player.x, player.y, Camera.smooth.damped(10))
 	Luven.setLightPosition(player_light, player.x, player.y)
-	--Luven.camera\setPosition(player.x, player.y)
 	for item in *vItems!
 		item\update(dt)
 		if item.alive
@@ -90,13 +79,11 @@ love.draw = ->
 	tx = math.floor(Luven.camera.x - (love.graphics.getWidth()/Luven.camera.scaleX) / 2)
 	ty = math.floor(Luven.camera.y - (love.graphics.getHeight()/Luven.camera.scaleY) / 2)
 	MAP[map]\draw(-tx, -ty, Luven.camera.scaleX, Luven.camera.scaleY)
-	--camera\attach()
 	Luven.drawBegin()
 	for item in *vItems! do item\draw!
-	Luven.drawEnd()
 	--love.graphics.setColor(255, 0, 0)
 	--MAP[map]\bump_draw(world)
-	--camera\detach()
+	Luven.drawEnd()
 	love.graphics.setFont(kenPixel)
 	love.graphics.print("FPS: "..love.timer.getFPS!, 12, 12)
 	Moan.draw()

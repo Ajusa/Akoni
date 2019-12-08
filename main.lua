@@ -50,7 +50,6 @@ love.keypressed = function(key)
   return Moan.keypressed(key)
 end
 love.load = function()
-  love.window.setFullscreen(true)
   input = Input()
   cargo.init({
     dir = 'src',
@@ -74,8 +73,6 @@ love.load = function()
       end
     }
   })(true)
-  camera = Camera(0, 0, 2.5)
-  camera.smoother = Camera.smooth.damped(10)
   Luven.init()
   Luven.setAmbientLightColor({
     0.5,

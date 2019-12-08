@@ -30,6 +30,6 @@ class Player extends NPC
 	filter: (o) => if o.__class and o.__class.__name == "Dagger" then "cross" else "slide"
 	attack: =>
 		--if @data.weapon
-			x,y = camera\worldCoords(love.mouse.getPosition())
+			x,y = Luven.camera\worldCoords(love.mouse.getPosition())
 			angle = math.atan2(y-@y, x-@x)
 			Dagger(x: @x + 5, y: @y + 5, speed: 80, angle: angle) --+5 for centering the dagger
